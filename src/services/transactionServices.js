@@ -9,6 +9,8 @@ class TransactionService extends Service {
 
         const{bill_id, amount, transaction_detail, customer_id} = req.body
         const user_id = req.token.id
+
+        console.log(req.body, req.token.id)
         try {
             const findBillId = await bills.findByPk(bill_id)
 
